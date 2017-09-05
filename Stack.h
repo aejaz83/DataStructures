@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include<climits>
 #include"Utility.h"
 
 namespace Stack

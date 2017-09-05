@@ -47,7 +47,7 @@ namespace graph
             que.pop_front();
             std::list<int> current = adjacency_list[node];
 
-            for(auto& it = begin(current); (it != end(current)) && (visited[*it] == false); it++)
+            for(auto it = begin(current); (it != end(current)) && (visited[*it] == false); it++)
             {
                 visited[*it] = true;
                 que.push_back(*it);
@@ -75,7 +75,7 @@ namespace graph
         std::cout << "visit: " << root << " ";
         std::list<int> current = adjacency_list[root];
 
-        for(auto& it = begin(current); (it != end(current)) ; it++)
+        for(auto it = begin(current); (it != end(current)) ; it++)
             if(visited[*it] == false)
             {
                 dfsUtil(*it, visited);
@@ -118,7 +118,7 @@ namespace graph
             que.pop_front();
             std::list<int> current = adjacency_list[node];
 
-            for(auto& it = begin(current); (it != current.end()) && (visited[*it] == false); it++)
+            for(auto it = begin(current); (it != current.end()) && (visited[*it] == false); it++)
             {
                 visited[*it] = true;
                 que.push_back(*it);
